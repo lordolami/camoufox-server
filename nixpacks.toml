@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["python311", "python311Packages.pip", "xorg.libX11", "xorg.libXrandr", "xorg.libXcomposite", "xorg.libXcursor", "xorg.libXdamage", "xorg.libXext", "xorg.libXi", "xorg.libXtst", "nss", "nspr", "dbus", "expat", "cups", "libdrm", "mesa", "libudev-zero", "libgbm", "pango", "cairo", "atk", "at-spi2-atk", "gtk3", "alsa-lib"]
+nixPkgs = ["python311", "python311Packages.pip", "xorg.libX11", "xorg.libXrandr", "xorg.libXcomposite", "xorg.libXcursor", "xorg.libXdamage", "xorg.libXext", "xorg.libXi", "xorg.libXtst", "nss", "nspr", "dbus", "expat", "cups", "libdrm", "mesa", "libudev-zero", "pango", "cairo", "atk", "at-spi2-atk", "gtk3", "alsa-lib"]
 
 [phases.install]
 cmds = ["pip install -r requirements.txt", "python -m camoufox fetch"]
