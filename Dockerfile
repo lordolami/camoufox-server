@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11
 
 # Install Firefox/browser system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxext6 libxi6 libxtst6 libnss3 libnspr4 libdbus-1-3 \
     libexpat1 libcups2 libdrm2 libgbm1 libpango-1.0-0 libpangocairo-1.0-0 \
     libcairo2 libatk1.0-0 libatk-bridge2.0-0 libgtk-3-0 libasound2 \
-    libglib2.0-0 libgdk-pixbuf-xlib-2.0-0 libxfixes3 libxrender1 \
+    libglib2.0-0 libgdk-pixbuf2.0-0 libxfixes3 libxrender1 \
     libxinerama1 libxkbcommon0 wget ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
