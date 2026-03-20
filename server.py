@@ -385,10 +385,5 @@ threading.Thread(target=reaper, daemon=True).start()
 if __name__ == '__main__':
     port = int(os.environ.get('CAMOUFOX_PORT', 8080))
     print(f'[camoufox] Starting on port {port} — camoufox_available={CAMOUFOX_AVAILABLE}')
-    # Pre-warm the browser so first session is fast
-    if CAMOUFOX_AVAILABLE:
-        try:
-            get_browser()
-        except Exception as e:
-            print(f'[camoufox] Pre-warm failed: {e}')
+    # Browser launches lazily on first /session/create to avoid OOM during startup
     app.run(host='0.0.0.0', port=port, threaded=True)
